@@ -33,7 +33,6 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 * Validated data integrity using the **Data Explorer** tool.
 
 </details>
----
 
 ##  Lab 02: Running Applications in Azure
 *Focus: PaaS Deployment, Serverless Functions, and Cloud Observability*
@@ -76,7 +75,6 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 | *Measuring response times* | *Live console debugging* | *Availability tracking* | *Final deployment summary* |
 
 </details>
----
 
 ##  Lab 03: Integrating Applications in Azure
 *Focus: Asynchronous Messaging, Service Bus, and Decoupled Architecture*
@@ -108,7 +106,6 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 * **Automation:** Integrated **Azure Logic Apps** as a serverless listener to react instantly to new messages in the queue.
 
 </details>
----
 
 ##  Lab 04: The "Face-Anonymizer" - Final Integration
 *Focus: Full-Stack Integrated Cloud Solution*
