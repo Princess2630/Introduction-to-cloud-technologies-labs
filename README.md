@@ -13,10 +13,10 @@ Before diving into the technical labs, this portfolio establishes a baseline in 
 
 | Lab | Title | Core Objective | Primary Services Used |
 | :--- | :--- | :--- | :--- |
-| **Lab 02** | **Scalable Data Storage** | Implement hybrid storage for NoSQL metadata and unstructured files. | Cosmos DB, Blob Storage |
-| **Lab 03** | **Running Applications** | Deploy PaaS web apps and implement deep cloud observability. | App Service, App Insights, Functions |
-| **Lab 04** | **Integrating Applications** | Decouple system components using asynchronous messaging queues. | Service Bus, Logic Apps, .NET API |
-| **Lab 05** | **The Face-Anonymizer** | Build a serverless, event-driven image processing pipeline. | Full Azure Stack Integration |
+| **Lab 01** | **Scalable Data Storage** | Implement hybrid storage for NoSQL metadata and unstructured files. | Cosmos DB, Blob Storage |
+| **Lab 02** | **Running Applications** | Deploy PaaS web apps and implement deep cloud observability. | App Service, App Insights, Functions |
+| **Lab 03** | **Integrating Applications** | Decouple system components using asynchronous messaging queues. | Service Bus, Logic Apps, .NET API |
+| **Lab 04** | **The Face-Anonymizer** | Build a serverless, event-driven image processing pipeline. | Full Azure Stack Integration |
 
 ---
 
