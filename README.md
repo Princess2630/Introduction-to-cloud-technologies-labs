@@ -128,6 +128,13 @@ In this lab, I implemented two distinct types of cloud storage to handle differe
 
 ---
 
+##  The Journey Continues
+This repository represents my core Azure training, but it is only the beginning. As I continue my **MSc in Cybersecurity**, I will be adding more projects focused on **Cloud Security, DevSecOps, and Digital Forensics**.
+
+**Stay tuned for more updates as I continue this journey!**
+
+---
+
 <p align="center">
   <img src="https://img.shields.io/badge/Azure-App%20Service-blue?style=for-the-badge&logo=microsoftazure" />
   <img src="https://img.shields.io/badge/Azure-Cosmos%20DB-green?style=for-the-badge&logo=microsoftazure" />
