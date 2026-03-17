@@ -107,31 +107,36 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 
 </details>
 
-##  Lab 04: The "Face-Anonymizer" - Final Integration
-*Focus: Full-Stack Integrated Cloud Solution*
+## 🧪 Lab 05: The "Face-Anonymizer" - Final Integration
+*Focus: End-to-End Event-Driven Solution*
 
 <details>
-<summary><b>📂 View Full Project Walkthrough (10+ Screenshots)</b></summary>
+<summary><b>📂 View Project Walkthrough (9 Screenshots)</b></summary>
 
-### **Final Project Workflow**
-1. **Ingestion:** User-uploaded images are stored in a "requested" Blob container.
-2. **Messaging:** An `anonymizationrequested` message is sent to the Service Bus Queue.
-3. **Persistence:** User metadata and processing status are tracked in Azure Cosmos DB.
-4. **Completion:** The processed image is moved to the "completed" container for retrieval.
+### **The Full-Stack System**
+1. **Ingestion:** Images uploaded to "requested" Blob container via Web UI.
+2. **Messaging:** `anonymizationrequested` message published to Service Bus Queue.
+3. **Processing:** Background worker processes the image and updates Cosmos DB.
+4. **Completion:** Anonymized result moved to the "completed" container.
 
-| Step 1: Web Interface | Step 2: Queue Logic | Step 3: Storage Workflow |
+### **Integrated Resource View**
+| Step 1: Storage Lifecycle | Step 2: Database Tracking | Step 3: Messaging Logic |
 | :---: | :---: | :---: |
-| <img src="./images/azure5_10.png" width="250"> | <img src="./images/azure5_7.png" width="250"> | <img src="./images/azure5_8.png" width="250"> |
-| *The Face-Anonymizer UI* | *Handling request messages* | *Blob lifecycle management* |
+| <img src="./images/azure5_1.png" width="250"> | <img src="./images/azure5_2.png" width="250"> | <img src="./images/azure5_3.png" width="250"> |
+| *Managing Containers* | *Cosmos DB Status* | *Service Bus Operations* |
 
-| Step 4: Cosmos DB Logs | Step 5: Solution Structure | Step 6: Final Verification |
+| Step 4: Web UI | Step 5: Solution Code | Step 6: API Integration |
 | :---: | :---: | :---: |
-| <img src="./images/azure5_12.png" width="250"> | <img src="./images/azure5_11.png" width="250"> | <img src="./images/azure5_9.png" width="250"> |
-| *Anonymization metadata* | *Project file hierarchy* | *End-to-end system success* |
+| <img src="./images/azure5_4.png" width="250"> | <img src="./images/azure5_5.png" width="250"> | <img src="./images/azure5_6.png" width="250"> |
+| *Front-end Interface* | *Full Project Structure* | *Processing Endpoints* |
+
+| Step 7: Queue Traffic | Step 8: Process Completion | Step 9: Final Logs |
+| :---: | :---: | :---: |
+| <img src="./images/azure5_7.png" width="250"> | <img src="./images/azure5_8.png" width="250"> | <img src="./images/azure5_9.png" width="250"> |
+| *Handling Requests* | *Final Blob Storage* | *Successful Invocation* |
 
 </details>
 
----
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%">
