@@ -35,26 +35,45 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 </details>
 ---
 
-##  Lab 02: Running Applications in Azure
-*Focus: Azure App Service and Serverless Functions*
+##  Lab 03: Running Applications in Azure
+*Focus: PaaS Deployment, Serverless Functions, and Cloud Observability*
 
 <details>
-<summary><b>📂 View Full Project Walkthrough (10+ Screenshots)</b></summary>
+<summary><b>📂 View Full Project Walkthrough (19 Screenshots)</b></summary>
 
-### **Implementation Highlights**
-* **Azure App Service:** Deployed the "Psotify" web application to a live cloud environment.
-* **Azure Functions:** Implemented serverless HTTP triggers to handle backend logic with automatic scaling.
-* **Monitoring:** Used Application Insights to troubleshoot "500 Internal Server Errors."
-
-| Step 1: App Service Setup | Step 2: Deployment Status | Step 3: Live Application |
+### **Phase 1: App Service & Infrastructure**
+| Step 1: Resource Creation | Step 2: Deployment Center | Step 3: Config & Env Vars |
 | :---: | :---: | :---: |
-| <img src="./images/azure3_1.png" width="250"> | <img src="./images/azure3_4.png" width="250"> | <img src="./images/azure3_5.png" width="250"> |
-| *Creating Web App resources* | *Deployment success logs* | *Live Psotify API endpoint* |
+| <img src="./images/azure3_1.png" width="250"> | <img src="./images/azure3_2.png" width="250"> | <img src="./images/azure3_3.png" width="250"> |
+| *Provisioning Psotify Web App* | *Configuring GitHub CI/CD* | *Setting Connection Strings* |
 
-| Step 4: Function Setup | Step 5: Error Diagnostics | Step 6: Log Streaming |
+### **Phase 2: Live Deployment & System Metrics**
+| Step 4: Build Logs | Step 5: Web UI Access | Step 6: Service Metrics |
+| :---: | :---: | :---: |
+| <img src="./images/azure3_4.png" width="250"> | <img src="./images/azure3_5.png" width="250"> | <img src="./images/azure3_6.png" width="250"> |
+| *Build and deploy success* | *Live endpoint verification* | *Monitoring CPU/RAM usage* |
+
+### **Phase 3: Serverless Logic & Function App**
+| Step 7: Function Setup | Step 8: HTTP Triggers | Step 9: Code Execution |
 | :---: | :---: | :---: |
 | <img src="./images/azure3_7.png" width="250"> | <img src="./images/azure3_8.png" width="250"> | <img src="./images/azure3_9.png" width="250"> |
-| *Developing Serverless triggers* | *Root cause analysis in logs* | *Real-time console output* |
+| *Building serverless logic* | *Testing backend calls* | *Verifying runtime output* |
+
+### **Phase 4: Monitoring & Advanced Debugging**
+| Step 10: Logic App Flow | Step 11: Application Insights | Step 12: Dependency Map |
+| :---: | :---: | :---: |
+| <img src="./images/azure3_10.png" width="250"> | <img src="./images/azure3_11.png" width="250"> | <img src="./images/azure3_12.png" width="250"> |
+| *Visualizing workflows* | *Investigating health logs* | *Mapping service connections* |
+
+| Step 13: Failure Analysis | Step 14: Exception Tracing | Step 15: Live Metrics |
+| :---: | :---: | :---: |
+| <img src="./images/azure3_13.png" width="250"> | <img src="./images/azure3_14.png" width="250"> | <img src="./images/azure3_15.png" width="250"> |
+| *Analyzing 500 errors* | *Deep-dive into stack traces* | *Real-time telemetry* |
+
+| Step 16: Performance | Step 17: Log Streaming | Step 18: Resource Health | Step 19: Final Status |
+| :---: | :---: | :---: | :---: |
+| <img src="./images/azure3_16.png" width="200"> | <img src="./images/azure3_17.png" width="200"> | <img src="./images/azure3_18.png" width="200"> | <img src="./images/azure3_19.png" width="200"> |
+| *Measuring response times* | *Live console debugging* | *Availability tracking* | *Final deployment summary* |
 
 </details>
 
