@@ -1,154 +1,136 @@
 # Azure Cloud Technologies Labs - Full-Stack Portfolio ☁️
 
-This repository documents a comprehensive journey through Microsoft Azure, evolving from foundational data storage to advanced event-driven architectures and serverless application integration.
+This repository documents my end-to-end technical journey through Microsoft Azure, evolving from foundational data storage to advanced event-driven architectures and a final "Face-Anonymizer" integrated solution.
 
 ---
 
-##  Lab 01: Scalable Data Storage in Azure
-*Focus: NoSQL Databases and Blob Storage Management*
+## Cloud Foundations: Introduction to Azure
+Before diving into the technical labs, this portfolio establishes a baseline in **Cloud Computing**. Unlike traditional on-premise infrastructure, Microsoft Azure provides **PaaS (Platform as a Service)** and **Serverless** models. These allow developers to focus on writing code and managing data without worrying about hardware maintenance, electricity, or physical security.
+
+---
+
+## Curriculum Overview
+
+| Lab | Title | Core Objective | Primary Services Used |
+| :--- | :--- | :--- | :--- |
+| **Lab 02** | **Scalable Data Storage** | Implement hybrid storage for NoSQL metadata and unstructured files. | Cosmos DB, Blob Storage |
+| **Lab 03** | **Running Applications** | Deploy PaaS web apps and implement deep cloud observability. | App Service, App Insights, Functions |
+| **Lab 04** | **Integrating Applications** | Decouple system components using asynchronous messaging queues. | Service Bus, Logic Apps, .NET API |
+| **Lab 05** | **The Face-Anonymizer** | Build a serverless, event-driven image processing pipeline. | Full Azure Stack Integration |
+
+---
+
+## Lab 01: Scalable Data Storage in Azure
+
+### **Understanding Azure Storage**
+In this lab, I implemented two distinct types of cloud storage to handle different data needs:
+1. **Azure Blob Storage:** Used for *Unstructured Data*. It functions like a massive file system in the cloud. I utilized **Containers** to store images and files.
+2. **Azure Cosmos DB:** Used for *Structured NoSQL Data*. Unlike traditional tables, Cosmos DB allows for flexible JSON schemas, making it perfect for high-speed metadata tracking.
 
 <details>
-<summary><b>📂 View Full Project Walkthrough (10 Screenshots)</b></summary>
+<summary><b>📂 View Full Implementation Details (10 Screenshots)</b></summary>
 
-### **Phase 1: NoSQL Database (Cosmos DB) Setup**
-| Step 1: Provisioning | Step 2: Resource Overview | Step 3: Data Explorer |
-| :---: | :---: | :---: |
-| <img src="./images/azure2_1.png" width="250"> | <img src="./images/azure2_2.png" width="250"> | <img src="./images/azure2_3.png" width="250"> |
-| *Creating the Cosmos DB account* | *Database dashboard & metrics* | *Accessing the SQL API interface* |
-
-### **Phase 2: JSON Document & Schema Management**
-| Step 4: Container Creation | Step 5: Item Entry | Step 6: JSON Structure |
-| :---: | :---: | :---: |
-| <img src="./images/azure2_4.png" width="250"> | <img src="./images/azure2_5.png" width="250"> | <img src="./images/azure2_6.png" width="250"> |
-| *Defining the 'Songs' collection* | *Adding new data items* | *Verifying metadata schema* |
-
-### **Phase 3: Blob Storage & File Management**
-| Step 7: Storage Account | Step 8: Container Logic | Step 9: Access Tiers | Step 10: Final Verification |
-| :---: | :---: | :---: | :---: |
-| <img src="./images/azure2_7.png" width="200"> | <img src="./images/azure2_8.png" width="200"> | <img src="./images/azure2_9.png" width="200"> | <img src="./images/azure2_10.png" width="200"> |
-| *Provisioning storage* | *Creating image containers* | *Blob property settings* | *Successful storage deployment* |
-
-**Key Takeaways:** * Successfully implemented **Cosmos DB** for high-velocity metadata storage.
-* Managed unstructured data via **Azure Blob Storage** with dedicated containers for ingestion.
-* Validated data integrity using the **Data Explorer** tool.
+| Step | Technical Description | Visual Evidence |
+| :--- | :--- | :---: |
+| **01** | **Cosmos DB Provisioning:** Initializing the globally distributed NoSQL database account. | <img src="./images/azure2_1.png" width="300"> |
+| **02** | **Resource Overview:** Monitoring the deployment and health status of the Cosmos DB instance. | <img src="./images/azure2_2.png" width="300"> |
+| **03** | **Data Explorer:** Accessing the SQL API interface to manage collections and documents. | <img src="./images/azure2_3.png" width="300"> |
+| **04** | **Container Creation:** Defining the 'Songs' collection with specific partition keys for scaling. | <img src="./images/azure2_4.png" width="300"> |
+| **05** | **Document Entry:** Manually inserting JSON records to verify database write capability. | <img src="./images/azure2_5.png" width="300"> |
+| **06** | **JSON Schema:** Validating the data structure and metadata for application song entries. | <img src="./images/azure2_6.png" width="300"> |
+| **07** | **Storage Provisioning:** Creating a general-purpose v2 storage account for file hosting. | <img src="./images/azure2_7.png" width="300"> |
+| **08** | **Blob Containers:** Setting up the internal folder structure for image and file storage. | <img src="./images/azure2_8.png" width="300"> |
+| **09** | **Blob Properties:** Configuring access tiers (Hot/Cool) and security settings for assets. | <img src="./images/azure2_9.png" width="300"> |
+| **10** | **Final Storage View:** Verifying the successful creation of all storage infrastructure. | <img src="./images/azure2_10.png" width="300"> |
 
 </details>
 
-##  Lab 02: Running Applications in Azure
-*Focus: PaaS Deployment, Serverless Functions, and Cloud Observability*
+> **Conclusion:** By the end of this lab, I successfully bridged the gap between file storage and database management. I learned that choosing the right storage type (Blob vs. NoSQL) is critical for cost-efficiency and performance. I successfully demonstrated the ability to provision, secure, and query data within the Azure ecosystem.
+
+---
+
+##  Lab 02: Running Applications & Observability
 
 <details>
-<summary><b>📂 View Full Project Walkthrough (19 Screenshots)</b></summary>
+<summary><b>📂 View Full Implementation Details (19 Screenshots)</b></summary>
 
-### **Phase 1: App Service & Infrastructure**
-| Step 1: Resource Creation | Step 2: Deployment Center | Step 3: Config & Env Vars |
-| :---: | :---: | :---: |
-| <img src="./images/azure3_1.png" width="250"> | <img src="./images/azure3_2.png" width="250"> | <img src="./images/azure3_3.png" width="250"> |
-| *Provisioning Psotify Web App* | *Configuring GitHub CI/CD* | *Setting Connection Strings* |
-
-### **Phase 2: Live Deployment & System Metrics**
-| Step 4: Build Logs | Step 5: Web UI Access | Step 6: Service Metrics |
-| :---: | :---: | :---: |
-| <img src="./images/azure3_4.png" width="250"> | <img src="./images/azure3_5.png" width="250"> | <img src="./images/azure3_6.png" width="250"> |
-| *Build and deploy success* | *Live endpoint verification* | *Monitoring CPU/RAM usage* |
-
-### **Phase 3: Serverless Logic & Function App**
-| Step 7: Function Setup | Step 8: HTTP Triggers | Step 9: Code Execution |
-| :---: | :---: | :---: |
-| <img src="./images/azure3_7.png" width="250"> | <img src="./images/azure3_8.png" width="250"> | <img src="./images/azure3_9.png" width="250"> |
-| *Building serverless logic* | *Testing backend calls* | *Verifying runtime output* |
-
-### **Phase 4: Monitoring & Advanced Debugging**
-| Step 10: Logic App Flow | Step 11: Application Insights | Step 12: Dependency Map |
-| :---: | :---: | :---: |
-| <img src="./images/azure3_10.png" width="250"> | <img src="./images/azure3_11.png" width="250"> | <img src="./images/azure3_12.png" width="250"> |
-| *Visualizing workflows* | *Investigating health logs* | *Mapping service connections* |
-
-| Step 13: Failure Analysis | Step 14: Exception Tracing | Step 15: Live Metrics |
-| :---: | :---: | :---: |
-| <img src="./images/azure3_13.png" width="250"> | <img src="./images/azure3_14.png" width="250"> | <img src="./images/azure3_15.png" width="250"> |
-| *Analyzing 500 errors* | *Deep-dive into stack traces* | *Real-time telemetry* |
-
-| Step 16: Performance | Step 17: Log Streaming | Step 18: Resource Health | Step 19: Final Status |
-| :---: | :---: | :---: | :---: |
-| <img src="./images/azure3_16.png" width="200"> | <img src="./images/azure3_17.png" width="200"> | <img src="./images/azure3_18.png" width="200"> | <img src="./images/azure3_19.png" width="200"> |
-| *Measuring response times* | *Live console debugging* | *Availability tracking* | *Final deployment summary* |
+| Step | Technical Description | Visual Evidence |
+| :--- | :--- | :---: |
+| **01** | **App Service Setup:** Provisioning the web host for the "Psotify" API. | <img src="./images/azure3_1.png" width="300"> |
+| **02** | **Deployment Center:** Linking the source code repository for automated deployments. | <img src="./images/azure3_2.png" width="300"> |
+| **03** | **Env Variables:** Configuring connection strings for database integration. | <img src="./images/azure3_3.png" width="300"> |
+| **04** | **Deployment Logs:** Verifying the successful build and release of the web app. | <img src="./images/azure3_4.png" width="300"> |
+| **05** | **Live Endpoint:** Accessing the public URL to confirm the API is responsive. | <img src="./images/azure3_5.png" width="300"> |
+| **06** | **CPU/RAM Metrics:** Monitoring infrastructure performance under initial load. | <img src="./images/azure3_6.png" width="300"> |
+| **07** | **Function Setup:** Creating serverless HTTP-triggered logic for the backend. | <img src="./images/azure3_7.png" width="300"> |
+| **08** | **Invocation Test:** Triggering the serverless function to verify back-end logic. | <img src="./images/azure3_8.png" width="300"> |
+| **09** | **Function Logs:** Observing real-time console output during execution. | <img src="./images/azure3_9.png" width="300"> |
+| **10** | **Logic App Flow:** Visualizing the automated workflow for background tasks. | <img src="./images/azure3_10.png" width="300"> |
+| **11** | **App Insights:** Configuring the main dashboard for service observability. | <img src="./images/azure3_11.png" width="300"> |
+| **12** | **Application Map:** Mapping dependencies between the web app and database. | <img src="./images/azure3_12.png" width="300"> |
+| **13** | **Failure Analysis:** Investigating "500 Internal Server Errors" in production. | <img src="./images/azure3_13.png" width="300"> |
+| **14** | **Exception Tracing:** Performing a deep dive into the code's stack trace. | <img src="./images/azure3_14.png" width="300"> |
+| **15** | **Live Metrics Stream:** Monitoring real-time telemetry from active users. | <img src="./images/azure3_15.png" width="300"> |
+| **16** | **Performance Testing:** Analyzing server response times across different regions. | <img src="./images/azure3_16.png" width="300"> |
+| **17** | **Log Streaming:** Directly tailing application logs via the Azure Portal. | <img src="./images/azure3_17.png" width="300"> |
+| **18** | **Health Checks:** Ensuring the platform remains available and responsive. | <img src="./images/azure3_18.png" width="300"> |
+| **19** | **Final Summary:** Reviewing the health of the entire application ecosystem. | <img src="./images/azure3_19.png" width="300"> |
 
 </details>
 
-##  Lab 03: Integrating Applications in Azure
-*Focus: Asynchronous Messaging, Service Bus, and Decoupled Architecture*
+> **Conclusion:** This lab proved that deployment is only half the battle. By using **Azure App Service**, I moved my application from a local environment to a global URL. However, the most significant takeaway was mastering **Application Insights**. I learned to interpret stack traces and live metrics to identify a database connection failure, proving that a cloud engineer must be as skilled in troubleshooting as they are in development.
+
+---
+
+##  Lab 03: Integrating Applications
 
 <details>
-<summary><b>📂 View Full Project Walkthrough (9 Screenshots)</b></summary>
+<summary><b>📂 View Full Implementation Details (9 Screenshots)</b></summary>
 
-### **Phase 1: Service Bus & Messaging Infrastructure**
-| Step 1: Namespace Setup | Step 2: Queue Configuration | Step 3: Shared Access Policies |
-| :---: | :---: | :---: |
-| <img src="./images/azure4_1.png" width="250"> | <img src="./images/azure4_2.png" width="250"> | <img src="./images/azure4_3.png" width="250"> |
-| *Provisioning Service Bus Namespace* | *Creating the 'newsongqueue'* | *Managing connection strings* |
-
-### **Phase 2: API Development & Message Ingestion**
-| Step 4: .NET API Setup | Step 5: Messaging Logic | Step 6: Local Debugging |
-| :---: | :---: | :---: |
-| <img src="./images/azure4_4.png" width="250"> | <img src="./images/azure4_5.png" width="250"> | <img src="./images/azure4_6.png" width="250"> |
-| *Configuring the NewSongApi* | *Writing the Queue client code* | *Testing endpoint connectivity* |
-
-### **Phase 3: Logic Apps & Subscriber Verification**
-| Step 7: Logic App Designer | Step 8: Trigger Configuration | Step 9: Execution Success |
-| :---: | :---: | :---: |
-| <img src="./images/azure4_7.png" width="250"> | <img src="./images/azure4_8.png" width="250"> | <img src="./images/azure4_9.png" width="250"> |
-| *Designing automated workflows* | *Setting Service Bus triggers* | *Verifying end-to-end integration* |
-
-**Key Takeaways:**
-* **Decoupling:** Effectively separated the front-end API from backend processing using **Azure Service Bus**, ensuring that service failures in one tier do not crash the entire system.
-* **Scalability:** Implemented a queue-based load leveling pattern to handle traffic spikes smoothly.
-* **Automation:** Integrated **Azure Logic Apps** as a serverless listener to react instantly to new messages in the queue.
+| Step | Technical Description | Visual Evidence |
+| :--- | :--- | :---: |
+| **01** | **Service Bus Namespace:** Establishing the messaging backbone for integration. | <img src="./images/azure4_1.png" width="300"> |
+| **02** | **Queue Configuration:** Defining the `newsongqueue` properties (TTL, size). | <img src="./images/azure4_2.png" width="300"> |
+| **03** | **Access Policies:** Configuring SAS tokens for secure app authentication. | <img src="./images/azure4_3.png" width="300"> |
+| **04** | **API Project:** Developing the .NET Core API to drop messages into the queue. | <img src="./images/azure4_4.png" width="300"> |
+| **05** | **Sender Logic:** Coding the connection between the app and the Service Bus. | <img src="./images/azure4_5.png" width="300"> |
+| **06** | **Local Debugging:** Running local tests to ensure messages reach the cloud. | <img src="./images/azure4_6.png" width="300"> |
+| **07** | **Logic App Designer:** Designing the workflow that listens to the queue. | <img src="./images/azure4_7.png" width="300"> |
+| **08** | **Trigger Params:** Setting the polling interval for the Service Bus trigger. | <img src="./images/azure4_8.png" width="300"> |
+| **09** | **Process Success:** Verifying that the backend consumed the message correctly. | <img src="./images/azure4_9.png" width="300"> |
 
 </details>
 
-## 🧪 Lab 05: The "Face-Anonymizer" - Final Integration
-*Focus: End-to-End Event-Driven Solution*
+> **Conclusion:** I moved away from "Monolithic" design toward "Microservices." By implementing **Azure Service Bus**, I created a system where the front end and back end are decoupled. The major conclusion here is **Reliability**: even if the backend processor is temporarily down, the Service Bus Queue ensures no user data is lost.
+
+---
+
+##  Lab 04: The "Face-Anonymizer" (Final Capstone)
 
 <details>
-<summary><b>📂 View Project Walkthrough (9 Screenshots)</b></summary>
+<summary><b>📂 View Full Implementation Details (9 Screenshots)</b></summary>
 
-### **The Full-Stack System**
-1. **Ingestion:** Images uploaded to "requested" Blob container via Web UI.
-2. **Messaging:** `anonymizationrequested` message published to Service Bus Queue.
-3. **Processing:** Background worker processes the image and updates Cosmos DB.
-4. **Completion:** Anonymized result moved to the "completed" container.
-
-### **Integrated Resource View**
-| Step 1: Storage Lifecycle | Step 2: Database Tracking | Step 3: Messaging Logic |
-| :---: | :---: | :---: |
-| <img src="./images/azure5_1.png" width="250"> | <img src="./images/azure5_2.png" width="250"> | <img src="./images/azure5_3.png" width="250"> |
-| *Managing Containers* | *Cosmos DB Status* | *Service Bus Operations* |
-
-| Step 4: Web UI | Step 5: Solution Code | Step 6: API Integration |
-| :---: | :---: | :---: |
-| <img src="./images/azure5_4.png" width="250"> | <img src="./images/azure5_5.png" width="250"> | <img src="./images/azure5_6.png" width="250"> |
-| *Front-end Interface* | *Full Project Structure* | *Processing Endpoints* |
-
-| Step 7: Queue Traffic | Step 8: Process Completion | Step 9: Final Logs |
-| :---: | :---: | :---: |
-| <img src="./images/azure5_7.png" width="250"> | <img src="./images/azure5_8.png" width="250"> | <img src="./images/azure5_9.png" width="250"> |
-| *Handling Requests* | *Final Blob Storage* | *Successful Invocation* |
+| Step | Technical Description | Visual Evidence |
+| :--- | :--- | :---: |
+| **01** | **Container Lifecycle:** Managing the 'requested' and 'completed' image blobs. | <img src="./images/azure5_1.png" width="300"> |
+| **02** | **Cosmos DB Logging:** Tracking the status of every anonymization request. | <img src="./images/azure5_2.png" width="300"> |
+| **03** | **Service Bus Monitor:** Monitoring the active traffic of request messages. | <img src="./images/azure5_3.png" width="300"> |
+| **04** | **Web Interface:** The user-facing portal for uploading target images. | <img src="./images/azure5_4.png" width="300"> |
+| **05** | **Solution Structure:** The final code hierarchy of the integrated project. | <img src="./images/azure5_5.png" width="300"> |
+| **06** | **Integration Logic:** The bridge code between storage and messaging. | <img src="./images/azure5_6.png" width="300"> |
+| **07** | **Queue Peak:** Verifying the background processing of incoming requests. | <img src="./images/azure5_7.png" width="300"> |
+| **08** | **Final Blob:** Confirming the anonymized image exists in 'completed'. | <img src="./images/azure5_8.png" width="300"> |
+| **09** | **Pipeline Success:** Final logs showing a 100% success rate for the pipeline. | <img src="./images/azure5_9.png" width="300"> |
 
 </details>
 
+> **Conclusion:** This final project served as a cumulative validation of my Azure expertise. I successfully integrated **Storage, Messaging, and Compute** into a single event-driven pipeline. This proves my ability to architect complex, automated cloud solutions that solve real-world problems.
+
+---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%">
-</p>
-
-<p align="center">
-  <b>   | MSc Cybersecurity Candidate</b><br>
-  <i>Current Focus: Cloud Security, Serverless Architectures, and System Integration</i>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Princess2630">
-    <img src="https://img.shields.io/badge/Follow-Princess2630-blue?style=for-the-badge&logo=github" alt="Follow on GitHub">
-  </a>
+  <img src="https://img.shields.io/badge/Azure-App%20Service-blue?style=for-the-badge&logo=microsoftazure" />
+  <img src="https://img.shields.io/badge/Azure-Cosmos%20DB-green?style=for-the-badge&logo=microsoftazure" />
+  <img src="https://img.shields.io/badge/Azure-Service%20Bus-orange?style=for-the-badge&logo=microsoftazure" />
+  <img src="https://img.shields.io/badge/MSc-Cybersecurity-red?style=for-the-badge" />
 </p>
