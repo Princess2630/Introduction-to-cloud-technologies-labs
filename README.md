@@ -8,25 +8,31 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 *Focus: NoSQL Databases and Blob Storage Management*
 
 <details>
-<summary><b>📂 View Full Project Walkthrough (7+ Screenshots)</b></summary>
+<summary><b>📂 View Full Project Walkthrough (10 Screenshots)</b></summary>
 
-### **Implementation Highlights**
-* **Azure Cosmos DB:** Provisioned a globally distributed NoSQL database using the Core (SQL) API.
-* **Blob Storage:** Configured secure, private containers for handling unstructured file and image storage.
-* **Data Explorer:** Performed real-time CRUD operations to manage JSON documents.
-
-| Step 1: Cosmos DB Setup | Step 2: JSON Management | Step 3: Blob Containers |
+### **Phase 1: NoSQL Database (Cosmos DB) Setup**
+| Step 1: Provisioning | Step 2: Resource Overview | Step 3: Data Explorer |
 | :---: | :---: | :---: |
 | <img src="./images/azure2_1.png" width="250"> | <img src="./images/azure2_2.png" width="250"> | <img src="./images/azure2_3.png" width="250"> |
-| *Provisioning the database* | *Managing metadata entries* | *Setting up storage containers* |
+| *Creating the Cosmos DB account* | *Database dashboard & metrics* | *Accessing the SQL API interface* |
 
-| Step 4: Schema Verification | Step 5: Data Explorer View | Step 6: Storage Access |
+### **Phase 2: JSON Document & Schema Management**
+| Step 4: Container Creation | Step 5: Item Entry | Step 6: JSON Structure |
 | :---: | :---: | :---: |
 | <img src="./images/azure2_4.png" width="250"> | <img src="./images/azure2_5.png" width="250"> | <img src="./images/azure2_6.png" width="250"> |
-| *Verifying NoSQL records* | *JSON document structure* | *Private container settings* |
+| *Defining the 'Songs' collection* | *Adding new data items* | *Verifying metadata schema* |
+
+### **Phase 3: Blob Storage & File Management**
+| Step 7: Storage Account | Step 8: Container Logic | Step 9: Access Tiers | Step 10: Final Verification |
+| :---: | :---: | :---: | :---: |
+| <img src="./images/azure2_7.png" width="200"> | <img src="./images/azure2_8.png" width="200"> | <img src="./images/azure2_9.png" width="200"> | <img src="./images/azure2_10.png" width="200"> |
+| *Provisioning storage* | *Creating image containers* | *Blob property settings* | *Successful storage deployment* |
+
+**Key Takeaways:** * Successfully implemented **Cosmos DB** for high-velocity metadata storage.
+* Managed unstructured data via **Azure Blob Storage** with dedicated containers for ingestion.
+* Validated data integrity using the **Data Explorer** tool.
 
 </details>
-
 ---
 
 ##  Lab 02: Running Applications in Azure
