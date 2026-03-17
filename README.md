@@ -76,32 +76,38 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 | *Measuring response times* | *Live console debugging* | *Availability tracking* | *Final deployment summary* |
 
 </details>
-
 ---
 
 ##  Lab 03: Integrating Applications in Azure
-*Focus: Decoupled Architecture & Service Bus Messaging*
+*Focus: Asynchronous Messaging, Service Bus, and Decoupled Architecture*
 
 <details>
-<summary><b>📂 View Full Project Walkthrough (10+ Screenshots)</b></summary>
+<summary><b>📂 View Full Project Walkthrough (9 Screenshots)</b></summary>
 
-### **Implementation Highlights**
-* **Azure Service Bus:** Implemented asynchronous messaging using the publish-subscribe pattern.
-* **Queue Management:** Created the `newsongqueue` to decouple the API from the backend processor.
-* **Logic Apps:** Integrated automated workflows to react to messaging events.
-
-| Step 1: Service Bus Setup | Step 2: Queue Creation | Step 3: API Development |
+### **Phase 1: Service Bus & Messaging Infrastructure**
+| Step 1: Namespace Setup | Step 2: Queue Configuration | Step 3: Shared Access Policies |
 | :---: | :---: | :---: |
 | <img src="./images/azure4_1.png" width="250"> | <img src="./images/azure4_2.png" width="250"> | <img src="./images/azure4_3.png" width="250"> |
-| *Provisioning the namespace* | *Configuring newsongqueue* | *Building the Async backend* |
+| *Provisioning Service Bus Namespace* | *Creating the 'newsongqueue'* | *Managing connection strings* |
 
-| Step 4: Topic Setup | Step 5: Logic App Flow | Step 6: Execution Logs |
+### **Phase 2: API Development & Message Ingestion**
+| Step 4: .NET API Setup | Step 5: Messaging Logic | Step 6: Local Debugging |
 | :---: | :---: | :---: |
-| <img src="./images/azure4_10.png" width="250"> | <img src="./images/azure4_13.png" width="250"> | <img src="./images/azure4_15.png" width="250"> |
-| *Pub-Sub topic broadcasting* | *Visualizing the workflow* | *Message processing success* |
+| <img src="./images/azure4_4.png" width="250"> | <img src="./images/azure4_5.png" width="250"> | <img src="./images/azure4_6.png" width="250"> |
+| *Configuring the NewSongApi* | *Writing the Queue client code* | *Testing endpoint connectivity* |
+
+### **Phase 3: Logic Apps & Subscriber Verification**
+| Step 7: Logic App Designer | Step 8: Trigger Configuration | Step 9: Execution Success |
+| :---: | :---: | :---: |
+| <img src="./images/azure4_7.png" width="250"> | <img src="./images/azure4_8.png" width="250"> | <img src="./images/azure4_9.png" width="250"> |
+| *Designing automated workflows* | *Setting Service Bus triggers* | *Verifying end-to-end integration* |
+
+**Key Takeaways:**
+* **Decoupling:** Effectively separated the front-end API from backend processing using **Azure Service Bus**, ensuring that service failures in one tier do not crash the entire system.
+* **Scalability:** Implemented a queue-based load leveling pattern to handle traffic spikes smoothly.
+* **Automation:** Integrated **Azure Logic Apps** as a serverless listener to react instantly to new messages in the queue.
 
 </details>
-
 ---
 
 ##  Lab 04: The "Face-Anonymizer" - Final Integration
