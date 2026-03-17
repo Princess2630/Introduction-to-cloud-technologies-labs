@@ -35,7 +35,7 @@ This repository documents a comprehensive journey through Microsoft Azure, evolv
 </details>
 ---
 
-##  Lab 03: Running Applications in Azure
+##  Lab 02: Running Applications in Azure
 *Focus: PaaS Deployment, Serverless Functions, and Cloud Observability*
 
 <details>
